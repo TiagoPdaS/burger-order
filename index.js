@@ -22,16 +22,9 @@ const checkIdExists = (req, res, next) => {
   req.orderIndex = index;
   req.orderID = id;
 
-  console.log(`Method: ${req.method}, URL: ${req.originalUrl}`);
 
   next();
 }
-
-// Middleware to log method and URL of the request
-const logRequest = (req, res, next) => {
-    console.log(`Method: ${req.method}, URL: ${req.originalUrl}`);
- 
-  }
 
 // Route to list all orders
 app.get('/orders', (req, res) => {
